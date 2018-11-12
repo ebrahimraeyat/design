@@ -1,0 +1,16 @@
+# ignore everything
+*
+
+# but don't ignore files ending with slash = directories
+!*/
+
+# and don't ignore files ending with ".php"
+#!*.EDB
+#!*.FDB
+#!*.dwg
+#!*.DWG
+!*.e2k
+!*.E2k
+!*.f2k
+!*.F2k
+!.gitignore
