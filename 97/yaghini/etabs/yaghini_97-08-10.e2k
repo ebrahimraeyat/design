@@ -467,6 +467,7 @@ $ LOAD PATTERNS
   LOADPATTERN "EYALL"  TYPE  "Seismic"  SELFWEIGHT  0
   LOADPATTERN "EX"  TYPE  "Seismic"  SELFWEIGHT  0
   LOADPATTERN "EY"  TYPE  "Seismic"  SELFWEIGHT  0
+  LOADPATTERN "EV"  TYPE  "Other"  SELFWEIGHT  0
   LOADPATTERN "EXDRIFT"  TYPE  "Seismic (Drift)"  SELFWEIGHT  0
   LOADPATTERN "EYDRIFT"  TYPE  "Seismic (Drift)"  SELFWEIGHT  0
   SEISMIC "EXALL"  "User Coefficient"    DIR "X X+ECC X-ECC"  ECC 0.05  TOPSTORY "karposhteh"    BOTTOMSTORY "Base"    SHEARCOEFF 0.165  HEIGHTEXPONENT 1
@@ -1177,7 +1178,9 @@ $ LOAD CASES
   LOADCASE "EX"  TYPE  "Linear Static"  INITCOND  "PRESET"  DESIGNTYPE  "Other"  
   LOADCASE "EX"  LOADPAT  "EX"  SF  1 
   LOADCASE "EY"  TYPE  "Linear Static"  INITCOND  "PRESET"  DESIGNTYPE  "Other"  
-  LOADCASE "EY"  LOADPAT  "EY"  SF  1 
+  LOADCASE "EY"  LOADPAT  "EY"  SF  1
+  LOADCASE "EV"  TYPE  "Linear Static"  INITCOND  "PRESET"  
+  LOADCASE "EV"  LOADPAT  "EV"  SF  1  
   LOADCASE "EXALL+0.3EY"  TYPE  "Linear Static"  INITCOND  "PRESET"  
   LOADCASE "EXALL+0.3EY"  LOADPAT  "EXALL"  SF  1 
   LOADCASE "EXALL+0.3EY"  LOADPAT  "EY"  SF  0.3 
@@ -1246,6 +1249,7 @@ $ LOAD COMBINATIONS
   COMBO "UDCon6"  LOADCASE "LPARTITION"  SF 1 
   COMBO "UDCon6"  LOADCASE "SNOW"  SF 0.2 
   COMBO "UDCon6"  LOADCASE "EXALL+0.3EY"  SF 1 
+  COMBO "UDCon6"  LOADCASE "EV"  SF 1 
   COMBO "UDCon7"  TYPE "Linear Add"  NOTES "Dead + Live - Static Earthquake  [Strength]"  
   COMBO "UDCon7"  DESIGN "Composite Column"  COMBOTYPE "Strength"  
   COMBO "UDCon7"  DESIGN "Concrete"  COMBOTYPE "Strength"  
@@ -1256,6 +1260,7 @@ $ LOAD COMBINATIONS
   COMBO "UDCon7"  LOADCASE "LPARTITION"  SF 1 
   COMBO "UDCon7"  LOADCASE "SNOW"  SF 0.2 
   COMBO "UDCon7"  LOADCASE "EXALL+0.3EY"  SF -1 
+  COMBO "UDCon7"  LOADCASE "EV"  SF 1 
   COMBO "UDCon8"  TYPE "Linear Add"  NOTES "Dead + Live + Static Earthquake  [Strength]"  
   COMBO "UDCon8"  DESIGN "Composite Column"  COMBOTYPE "Strength"  
   COMBO "UDCon8"  DESIGN "Concrete"  COMBOTYPE "Strength"  
@@ -1266,6 +1271,7 @@ $ LOAD COMBINATIONS
   COMBO "UDCon8"  LOADCASE "LPARTITION"  SF 1 
   COMBO "UDCon8"  LOADCASE "SNOW"  SF 0.2 
   COMBO "UDCon8"  LOADCASE "EXALL-0.3EY"  SF 1 
+  COMBO "UDCon8"  LOADCASE "EV"  SF 1 
   COMBO "UDCon9"  TYPE "Linear Add"  NOTES "Dead + Live - Static Earthquake  [Strength]"  
   COMBO "UDCon9"  DESIGN "Composite Column"  COMBOTYPE "Strength"  
   COMBO "UDCon9"  DESIGN "Concrete"  COMBOTYPE "Strength"  
@@ -1276,6 +1282,7 @@ $ LOAD COMBINATIONS
   COMBO "UDCon9"  LOADCASE "LPARTITION"  SF 1 
   COMBO "UDCon9"  LOADCASE "SNOW"  SF 0.2 
   COMBO "UDCon9"  LOADCASE "EXALL-0.3EY"  SF -1 
+  COMBO "UDCon9"  LOADCASE "EV"  SF 1 
   COMBO "UDCon10"  TYPE "Linear Add"  NOTES "Dead + Live + Static Earthquake  [Strength]"  
   COMBO "UDCon10"  DESIGN "Composite Column"  COMBOTYPE "Strength"  
   COMBO "UDCon10"  DESIGN "Concrete"  COMBOTYPE "Strength"  
@@ -1286,6 +1293,7 @@ $ LOAD COMBINATIONS
   COMBO "UDCon10"  LOADCASE "LPARTITION"  SF 1 
   COMBO "UDCon10"  LOADCASE "SNOW"  SF 0.2 
   COMBO "UDCon10"  LOADCASE "EYALL+0.3EX"  SF 1 
+  COMBO "UDCon10"  LOADCASE "EV"  SF 1 
   COMBO "UDCon11"  TYPE "Linear Add"  NOTES "Dead + Live - Static Earthquake  [Strength]"  
   COMBO "UDCon11"  DESIGN "Composite Column"  COMBOTYPE "Strength"  
   COMBO "UDCon11"  DESIGN "Concrete"  COMBOTYPE "Strength"  
@@ -1296,6 +1304,7 @@ $ LOAD COMBINATIONS
   COMBO "UDCon11"  LOADCASE "LPARTITION"  SF 1 
   COMBO "UDCon11"  LOADCASE "SNOW"  SF 0.2 
   COMBO "UDCon11"  LOADCASE "EYALL+0.3EX"  SF -1 
+  COMBO "UDCon11"  LOADCASE "EV"  SF 1 
   COMBO "UDCon12"  TYPE "Linear Add"  NOTES "Dead + Live + Static Earthquake  [Strength]"  
   COMBO "UDCon12"  DESIGN "Composite Column"  COMBOTYPE "Strength"  
   COMBO "UDCon12"  DESIGN "Concrete"  COMBOTYPE "Strength"  
@@ -1306,6 +1315,7 @@ $ LOAD COMBINATIONS
   COMBO "UDCon12"  LOADCASE "LPARTITION"  SF 1 
   COMBO "UDCon12"  LOADCASE "SNOW"  SF 0.2 
   COMBO "UDCon12"  LOADCASE "EYALL-0.3EX"  SF 1 
+  COMBO "UDCon12"  LOADCASE "EV"  SF 1 
   COMBO "UDCon13"  TYPE "Linear Add"  NOTES "Dead + Live - Static Earthquake  [Strength]"  
   COMBO "UDCon13"  DESIGN "Composite Column"  COMBOTYPE "Strength"  
   COMBO "UDCon13"  DESIGN "Concrete"  COMBOTYPE "Strength"  
@@ -1316,46 +1326,55 @@ $ LOAD COMBINATIONS
   COMBO "UDCon13"  LOADCASE "LPARTITION"  SF 1 
   COMBO "UDCon13"  LOADCASE "SNOW"  SF 0.2 
   COMBO "UDCon13"  LOADCASE "EYALL-0.3EX"  SF -1 
+  COMBO "UDCon13"  LOADCASE "EV"  SF 1 
   COMBO "UDCon14"  TYPE "Linear Add"  NOTES "Dead (min) + Static Earthquake  [Strength]"  
   COMBO "UDCon14"  DESIGN "Composite Column"  COMBOTYPE "Strength"  
   COMBO "UDCon14"  DESIGN "Concrete"  COMBOTYPE "Strength"  
   COMBO "UDCon14"  LOADCASE "Dead"  SF 0.9 
   COMBO "UDCon14"  LOADCASE "EXALL+0.3EY"  SF 1 
+  COMBO "UDCon14"  LOADCASE "EV"  SF -1 
   COMBO "UDCon15"  TYPE "Linear Add"  NOTES "Dead (min) - Static Earthquake  [Strength]"  
   COMBO "UDCon15"  DESIGN "Composite Column"  COMBOTYPE "Strength"  
   COMBO "UDCon15"  DESIGN "Concrete"  COMBOTYPE "Strength"  
   COMBO "UDCon15"  LOADCASE "Dead"  SF 0.9 
   COMBO "UDCon15"  LOADCASE "EXALL+0.3EY"  SF -1 
+  COMBO "UDCon15"  LOADCASE "EV"  SF -1 
   COMBO "UDCon16"  TYPE "Linear Add"  NOTES "Dead (min) + Static Earthquake  [Strength]"  
   COMBO "UDCon16"  DESIGN "Composite Column"  COMBOTYPE "Strength"  
   COMBO "UDCon16"  DESIGN "Concrete"  COMBOTYPE "Strength"  
   COMBO "UDCon16"  LOADCASE "Dead"  SF 0.9 
   COMBO "UDCon16"  LOADCASE "EXALL-0.3EY"  SF 1 
+  COMBO "UDCon16"  LOADCASE "EV"  SF -1 
   COMBO "UDCon17"  TYPE "Linear Add"  NOTES "Dead (min) - Static Earthquake  [Strength]"  
   COMBO "UDCon17"  DESIGN "Composite Column"  COMBOTYPE "Strength"  
   COMBO "UDCon17"  DESIGN "Concrete"  COMBOTYPE "Strength"  
   COMBO "UDCon17"  LOADCASE "Dead"  SF 0.9 
   COMBO "UDCon17"  LOADCASE "EXALL-0.3EY"  SF -1 
+  COMBO "UDCon17"  LOADCASE "EV"  SF -1 
   COMBO "UDCon18"  TYPE "Linear Add"  NOTES "Dead (min) + Static Earthquake  [Strength]"  
   COMBO "UDCon18"  DESIGN "Composite Column"  COMBOTYPE "Strength"  
   COMBO "UDCon18"  DESIGN "Concrete"  COMBOTYPE "Strength"  
   COMBO "UDCon18"  LOADCASE "Dead"  SF 0.9 
   COMBO "UDCon18"  LOADCASE "EYALL+0.3EX"  SF 1 
+  COMBO "UDCon18"  LOADCASE "EV"  SF -1 
   COMBO "UDCon19"  TYPE "Linear Add"  NOTES "Dead (min) - Static Earthquake  [Strength]"  
   COMBO "UDCon19"  DESIGN "Composite Column"  COMBOTYPE "Strength"  
   COMBO "UDCon19"  DESIGN "Concrete"  COMBOTYPE "Strength"  
   COMBO "UDCon19"  LOADCASE "Dead"  SF 0.9 
   COMBO "UDCon19"  LOADCASE "EYALL+0.3EX"  SF -1 
+  COMBO "UDCon19"  LOADCASE "EV"  SF -1 
   COMBO "UDCon20"  TYPE "Linear Add"  NOTES "Dead (min) + Static Earthquake  [Strength]"  
   COMBO "UDCon20"  DESIGN "Composite Column"  COMBOTYPE "Strength"  
   COMBO "UDCon20"  DESIGN "Concrete"  COMBOTYPE "Strength"  
   COMBO "UDCon20"  LOADCASE "Dead"  SF 0.9 
   COMBO "UDCon20"  LOADCASE "EYALL-0.3EX"  SF 1 
+  COMBO "UDCon20"  LOADCASE "EV"  SF -1 
   COMBO "UDCon21"  TYPE "Linear Add"  NOTES "Dead (min) - Static Earthquake  [Strength]"  
   COMBO "UDCon21"  DESIGN "Composite Column"  COMBOTYPE "Strength"  
   COMBO "UDCon21"  DESIGN "Concrete"  COMBOTYPE "Strength"  
   COMBO "UDCon21"  LOADCASE "Dead"  SF 0.9 
   COMBO "UDCon21"  LOADCASE "EYALL-0.3EX"  SF -1 
+  COMBO "UDCon21"  LOADCASE "EV"  SF -1 
   COMBO "SOIL-1"  TYPE "Linear Add"  
   COMBO "SOIL-1"  LOADCASE "Dead"  SF 1 
   COMBO "SOIL-1"  LOADCASE "Live"  SF 1 
