@@ -1,4 +1,4 @@
-$ File E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.e2k saved 1/1/2017 1:56:17 AM
+$ File E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.e2k saved 1/1/2017 6:40:50 AM
  
 $ PROGRAM INFORMATION
   PROGRAM  "ETABS 2015"  VERSION "15.2.2"  
@@ -106,6 +106,7 @@ $ FRAME SECTIONS
   FRAMESECTION  "C45X45@28"  MATERIAL "C35"  SHAPE "Concrete Rectangular"  D 0.45 B 0.45 
   FRAMESECTION  "C45X45@28-C40"  MATERIAL "C40"  SHAPE "Concrete Rectangular"  D 0.45 B 0.45 
   FRAMESECTION  "C45X45-12@25-C40"  MATERIAL "C40"  SHAPE "Concrete Rectangular"  D 0.45 B 0.45 
+  FRAMESECTION  "2UNP08c7BM"  MATERIAL "S240"  SHAPE "2UNP08c7BM"  FILE "2UNP8"  
 
 $ CONCRETE SECTIONS
   CONCRETESECTION  "C35X35"  LONGBARMATERIAL "AIII"  CONFINEBARMATERIAL "AII"  TYPE "Column"  PATTERN "R-3-3"  TRANSREINF "TIES"  DESIGNCHECK "CHECK"  COVER 0.04 LONGBARAREA 0.0003142 CONFINEBARAREA 7.85E-05 CONFINEBARSPACING 0.15 NUMCONFINEBARS3 3 NUMCONFINEBARS2 3 
@@ -2434,6 +2435,17 @@ ETABS 2015 Ultimate  15.2.2 File saved as E:\design\97\khodabandeloo\ejraee\etab
 ETABS 2015 Ultimate  15.2.2 File saved as E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.EDB at 1/1/2017 1:36:15 AM
 ETABS 2015 Ultimate  15.2.2 File saved as E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.EDB at 1/1/2017 1:43:42 AM
 ETABS 2015 Ultimate  15.2.2 File saved as E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.EDB at 1/1/2017 1:49:38 AM
+ETABS 2015 Ultimate  15.2.2 File saved as E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.EDB at 1/1/2017 5:13:45 AM
+ETABS 2015 Ultimate  15.2.2 File saved as E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.EDB at 1/1/2017 5:25:14 AM
+ETABS 2015 Ultimate  15.2.2 File saved as E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.EDB at 1/1/2017 5:25:36 AM
+ETABS 2015 Ultimate  15.2.2 File saved as E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.EDB at 1/1/2017 5:25:38 AM
+ETABS 2015 Ultimate  15.2.2 File saved as E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.EDB at 1/1/2017 5:25:54 AM
+ETABS 2015 Ultimate  15.2.2 File saved as E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.EDB at 1/1/2017 5:44:10 AM
+ETABS 2015 Ultimate  15.2.2 File saved as E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.EDB at 1/1/2017 5:44:12 AM
+ETABS 2015 Ultimate  15.2.2 File saved as E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.EDB at 1/1/2017 5:44:24 AM
+ETABS 2015 Ultimate  15.2.2 File saved as E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.EDB at 1/1/2017 6:34:34 AM
+ETABS 2015 Ultimate  15.2.2 File saved as E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.EDB at 1/1/2017 6:34:37 AM
+ETABS 2015 Ultimate  15.2.2 File saved as E:\design\97\khodabandeloo\ejraee\etabs\khodabandeloo_97-08-28.EDB at 1/1/2017 6:34:57 AM
   ENDCOMMENTS  
 
   END
